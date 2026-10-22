@@ -1,0 +1,38 @@
+{
+  "name": "dsh-desktop-toast",
+  "version": "0.1.0",
+  "description": "Windows desktop toasts for DeepSeek Harness: task completion, failures, and pending approvals/questions, fired from the DSH host process",
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "cordis",
+    "notification",
+    "toast",
+    "windows"
+  ],
+  "scripts": {
+    "test": "node test/notify.test.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  }
+}

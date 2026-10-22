@@ -1,0 +1,22 @@
+# Bundle patch layer for dsh-desktop-toast: inserts the toast listener row into
+# the profile composition. The host half is lib/index.js (no browser half).
+# Every value below is the composition default and can be edited live in
+# Settings -> Plugins.
+- insert:
+    - id: desktop-toast
+      name: 'dsh-desktop-toast'
+      config:
+        enabled: true
+        notifyApproval: true
+        notifyQuestion: true
+        notifyTurnComplete: true
+        notifyTurnError: true
+        includeReason: true
+        sound: true
+        minIntervalMs: 1500
+        language: zh
+        # Requires the sender identity to be registered once with
+        #   scripts/register-aumid.ps1 -Aumid DeepSeek.Harness.Notify ...
+        # Without that Start Menu shortcut Windows accepts the toast and drops
+        # it silently; set this back to the default PowerShell AUMID then.
+        appId: 'DeepSeek.Harness.Notify'
