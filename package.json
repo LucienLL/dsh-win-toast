@@ -1,9 +1,21 @@
 {
-  "name": "dsh-desktop-toast",
+  "name": "dsh-win-toast",
   "version": "0.1.0",
-  "description": "Windows desktop toasts for DeepSeek Harness: task completion, failures, and pending approvals/questions, fired from the DSH host process",
+  "description": "Windows native toasts for DeepSeek Harness (host-side): pending approvals, pending questions, turn completion and turn failures",
   "type": "module",
   "main": "lib/index.js",
+  "author": {
+    "name": "Lucien LIU",
+    "url": "https://github.com/LucienLL"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucienLL/dsh-win-toast.git"
+  },
+  "homepage": "https://github.com/LucienLL/dsh-win-toast#readme",
+  "bugs": {
+    "url": "https://github.com/LucienLL/dsh-win-toast/issues"
+  },
   "files": [
     "lib",
     "scripts",

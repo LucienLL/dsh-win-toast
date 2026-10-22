@@ -1,10 +1,10 @@
-# Bundle patch layer for dsh-desktop-toast: inserts the toast listener row into
+# Bundle patch layer for dsh-win-toast: inserts the toast listener row into
 # the profile composition. The host half is lib/index.js (no browser half).
 # Every value below is the composition default and can be edited live in
 # Settings -> Plugins.
 - insert:
-    - id: desktop-toast
-      name: 'dsh-desktop-toast'
+    - id: win-toast
+      name: 'dsh-win-toast'
       config:
         enabled: true
         notifyApproval: true

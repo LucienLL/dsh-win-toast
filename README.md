@@ -1,6 +1,8 @@
-# dsh-desktop-toast
+# dsh-win-toast
 
-DeepSeek Harness 的 Windows 桌面通知插件：**需要你确认 / 回答时**、**回合结束时**，由 DSH 宿主进程直接弹系统通知（不依赖浏览器标签页在前台）。
+DeepSeek Harness 的 Windows 原生通知插件：**需要你确认 / 回答时**、**回合结束时**，由 DSH 宿主进程直接弹系统通知（不依赖浏览器标签页在前台）。
+
+> 曾用名 `dsh-desktop-toast`。该 npm 名称已由其他作者先占用（同功能、`0.1.2`），本项目改名 `dsh-win-toast` 发布，代码与仓库均为独立实现。
 
 ## 为什么是宿主侧
 
@@ -26,10 +28,16 @@ DSH 的确认与提问是"浏览器端应答、宿主端永久等待"的模型�
 ## 安装
 
 ```powershell
+# 从 npm（推荐）
+dsh plugin --profile web add dsh-win-toast
+
+# 或从本地检出
 dsh plugin --profile web add <本目录路径>
 ```
 
 然后重启 DSH web（插件是宿主侧插件，需要重新组合）。
+
+同生态的替代实现（同样功能、不同作者）：`dsh-desktop-toast`、`dsh-desktop-notify`、`dsh-notify-me`。装之前建议只留一个，否则同一次确认会收到多条通知。
 
 ## 发送方身份（一次性，可选）
 
